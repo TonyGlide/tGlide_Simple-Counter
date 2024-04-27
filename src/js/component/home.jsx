@@ -1,25 +1,25 @@
 import React from "react";
+import SimpleCounter from "./SimpleCounter";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
+function calculateSeconds(aCounter, placeValue) {
+return Math.floor(aCounter / placeValue) % 10
+
+}
 
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+		<SimpleCounter 
+		hundred-thousandsDigit= {calculateSeconds(props.counter, 100000)}
+		ten-thousandsDigit= {calculateSeconds(props.counter, 10000)}
+		thousandsDigit= {calculateSeconds(props.counter, 1000)}
+		hundresDigit= {calculateSeconds(props.counter, 100)}
+		tensDigit= {calculateSeconds(props.counter, 10)}
+		onesDigit= {calculateSeconds(props.counter, 1)}
+		/>
+		</>
 	);
 };
 

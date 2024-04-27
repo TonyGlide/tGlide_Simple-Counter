@@ -1,0 +1,30 @@
+body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.counter-display {
+
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.counter-display div {
+    display: inline-block;
+    background-color: black;
+    color: aliceblue;
+    padding: 0px 10px;
+    font-size: 60px;
+    
+}
+
+.bi-stopwatch {
+  width: 70px;
+  height: 70px;
+padding-bottom: 15px;
+
+}
