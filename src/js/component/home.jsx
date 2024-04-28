@@ -1,11 +1,8 @@
 import React from "react";
 import SimpleCounter from "./SimpleCounter";
+import PropTypes from 'prop-types'; 
+import calculateSeconds from "../lib/time";
 
-
-function calculateSeconds(aCounter, placeValue) {
-return Math.floor(aCounter / placeValue) % 10
-
-}
 
 //create your first component
 const Home = (props) => {
@@ -22,5 +19,15 @@ const Home = (props) => {
 		</>
 	);
 };
+
+Home.propTypes = {
+    Digit6: PropTypes.number, 
+    Digit5: PropTypes.number, 
+    Digit4: PropTypes.number, 
+    Digit3: PropTypes.number, 
+    Digit2: PropTypes.number, 
+    Digit1: PropTypes.number, 
+}
+
 
 export default Home;
